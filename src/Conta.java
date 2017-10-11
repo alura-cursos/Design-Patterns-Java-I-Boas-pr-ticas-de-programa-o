@@ -2,11 +2,16 @@ import java.util.Calendar;
 
 class Conta {
 	private String titular;
-	private double saldo;
+	protected double saldo;
 	private String numero;
 	private String agencia;
 	private Calendar dataAbertura;
-	
+    protected EstadoDaConta estado;
+
+    public Conta(){
+        estado = new Positivo();
+    }
+
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
