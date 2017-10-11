@@ -1,4 +1,5 @@
 class Conta {
+	private String titular;
 	private double saldo;
 
 	public void deposita(double valor) {
@@ -7,5 +8,9 @@ class Conta {
 
 	public double getSaldo() {
 		return this.saldo;
+	}
+
+	public String getTitular() {
+		return titular;
 	}
 }
