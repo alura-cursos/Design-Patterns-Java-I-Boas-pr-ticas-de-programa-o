@@ -21,7 +21,7 @@ class NotaFiscalBuilder {
 		// chama o construtor sem parametros para garantir que os atributos estarão devidamente populados
 		this();
 		this.todasAcoesASeremExecutadas = lista;
-	}
+	} 
 
 	public NotaFiscalBuilder paraEmpresa(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
