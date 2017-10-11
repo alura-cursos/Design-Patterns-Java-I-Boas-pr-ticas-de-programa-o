@@ -2,6 +2,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 class IHIT extends TemplateDeImpostoCondicional {
+	public IHIT() {}
+
+    public IHIT(Imposto outroImposto) {
+        super(outroImposto);
+    }
 
 	public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
 		List<String> noOrcamento = new ArrayList<String>();

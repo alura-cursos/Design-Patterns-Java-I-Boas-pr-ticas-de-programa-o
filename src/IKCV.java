@@ -1,4 +1,10 @@
 class IKCV extends TemplateDeImpostoCondicional {
+	public IKCV() {
+	}
+
+	public IKCV(Imposto outroImposto) {
+		super(outroImposto);
+	}
 
 	private boolean temItemMaiorQue100ReaisNo(Orcamento orcamento) {
 		for (Item item : orcamento.getItens()) {
@@ -11,7 +17,8 @@ class IKCV extends TemplateDeImpostoCondicional {
 
 	@Override
 	public boolean deveUsarMaximaTaxacao(Orcamento orcamento) {
-		return orcamento.getValor() > 500 && temItemMaiorQue100ReaisNo(orcamento);
+		return orcamento.getValor() > 500
+				&& temItemMaiorQue100ReaisNo(orcamento);
 	}
 
 	@Override

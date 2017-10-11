@@ -1,9 +1,12 @@
+import java.util.Calendar;
+
 class Conta {
 	private String titular;
 	private double saldo;
 	private String numero;
 	private String agencia;
-
+	private Calendar dataAbertura;
+	
 	public void deposita(double valor) {
 		this.saldo += valor;
 	}
@@ -22,5 +25,9 @@ class Conta {
 
 	public String getAgencia() {
 		return agencia;
+	}
+
+	public Calendar getDataAbertura() {
+		return dataAbertura;
 	}
 }
